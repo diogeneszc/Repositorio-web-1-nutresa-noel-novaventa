@@ -15,8 +15,8 @@
   
     async obtenerIngredientes(idReceta) {
       try {
-        // En una API real, se enviaría el ID como parámetro en la URL
-        const respuesta = await fetch(`https://6adb716c3b7e90b8208ff289.mockapi.io/recetas/api/v1/ingredientes${idReceta}`);
+        
+        const respuesta = await fetch(`https://6adb716c3b7e90b8208ff289.mockapi.io/recetas/api/v1/ingredientes/${idReceta}`);
         if (!respuesta.ok) throw new Error("Error API Ingredientes");
         
         return await respuesta.json();

@@ -83,10 +83,10 @@
         tarjeta.style.cursor = "pointer"; 
         
         tarjeta.innerHTML = `
-          <h3>${receta.nombreReceta}</h3>
+          <h3>${receta.nombre}</h3>
           <div class="tarjeta-detalles">
-            <span class="badge">⏱ ${receta.minutos} min</span>
-            <span class="badge">👥 ${receta.porciones} porciones</span>
+            <span class="badge">⏱ ${receta.cantidad} min</span>
+            <span class="badge">👥 ${receta.fecha_vencimieto} porciones</span>
           </div>
         `;
 
@@ -130,7 +130,7 @@
       formulario.addEventListener("change", aplicarFiltros);
       btnRestablecer.addEventListener("click", restablecer);
       
-      // --- LO NUEVO: Evento del botón volver ---
+      
       btnVolver.addEventListener("click", cerrarDetalle);
       
     } catch (error) {
