@@ -1,15 +1,19 @@
-grupo-filtro .input-texto {
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid var(--linea);
-  background-color: var(--card);
+
+.grupo-filtro .input-texto {
+  padding: 0.6rem 1rem;      
+  border-radius: 12px;            
+  border: 1px solid var(--linea);  
+  background-color: var(--card);   
   font-family: "Inter", sans-serif;
   color: var(--texto);
-  min-width: 200px;
+  min-width: 220px;
+  outline: none;                   
+  transition: border-color 0.2s;
 }
+
 .grupo-filtro .input-texto:focus {
-  outline: 2px solid var(--verde-hondo);
-  border-color: transparent;
+  border-color: var(--verde-hondo);
+  box-shadow: 0 0 0 3px rgba(33, 91, 51, 0.15); 
 }
 panel-filtros {
   background-color: var(--crema-2);

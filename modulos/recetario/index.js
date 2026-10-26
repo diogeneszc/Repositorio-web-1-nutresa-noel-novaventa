@@ -87,5 +87,7 @@ document.getElementById("formulario-filtros").addEventListener("input", aplicarF
     }
   }
 
+  
+
   document.addEventListener("DOMContentLoaded", iniciarRecetario);
 })();
