@@ -93,3 +93,44 @@ panel-filtros {
 .oculto {
   display: none !important;
 }
+.receta-ingredientes-lista {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card);
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  overflow: hidden; 
+  margin-top: 1rem;
+}
+
+.receta-ingredientes-lista caption {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--verde-hondo);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.receta-ingredientes-lista thead {
+  background-color: var(--crema-2);
+}
+
+.receta-ingredientes-lista th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--verde-noche);
+  border-bottom: 2px solid var(--verde);
+}
+
+.receta-ingredientes-lista td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--linea);
+  color: var(--texto);
+}
+
+
+.receta-ingredientes-lista tbody tr:last-child td {
+  border-bottom: none;
+}
