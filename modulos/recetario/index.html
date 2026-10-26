@@ -12,7 +12,7 @@
   <main class="contenedor pagina-modulo">
     <section class="bloque-modulo">
       <h1> Recetario</h1>
-      <p>Encuentra tu receta ideal por el tiempo de preparacion</p>
+      <p> en cuentra tu receta ideal por nombre, porciones o tiempo de preparación<p>
       <form id="formulario-filtros" class="panel-filtros" aria-label="Filtros de búsqueda de recetas">
         <fieldset>
           <legend>Filtros de Recetas</legend>
@@ -45,8 +45,16 @@
         </fieldset>
       </form>
       <div id="galeria-recetas" class="grid-galeria" aria-live="polite"></div>
+      <div id="vista-detalle" class="oculto">
+        <button type="button" id="btn-volver" class="btn btn-secundario" style="margin-bottom: 1.5rem;">
+          ← Volver a la galería
+        </button>
+        
+        <section id="detalle-contenido" aria-live="polite"></section>
+      </div>
       <div id="recetario-estado" class="mensaje-estado oculto" role="status"></div>
     </section>
+    
   </main>
   <footer data-layout="footer"></footer>
   <script src="../../services/api.config.js"></script>

@@ -1,23 +1,29 @@
-grupo-filtro .input-texto {
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid var(--linea);
-  background-color: var(--card);
+
+.grupo-filtro .input-texto {
+  padding: 0.6rem 1rem;      
+  border-radius: 12px;            
+  border: 1px solid var(--linea);  
+  background-color: var(--card);   
   font-family: "Inter", sans-serif;
   color: var(--texto);
-  min-width: 200px;
+  min-width: 220px;
+  outline: none;                   
+  transition: border-color 0.2s;
 }
+
 .grupo-filtro .input-texto:focus {
-  outline: 2px solid var(--verde-hondo);
-  border-color: transparent;
+  border-color: var(--verde-hondo);
+  box-shadow: 0 0 0 3px rgba(33, 91, 51, 0.15); 
 }
 panel-filtros {
   background-color: var(--crema-2);
   padding: 1.25rem;
   border-radius: 14px;
-  margin-bottom: 2rem;
   border: 1px solid var(--linea);
+   margin-bottom: 3.5rem;
 }
+ 
+
 .panel-filtros fieldset {
   border: none;
   padding: 0;
@@ -49,27 +55,32 @@ panel-filtros {
   min-width: 200px;
 }
 .grid-galeria {
+  margin-top: 3.5rem !important;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
 }
 .tarjeta-receta {
-  background-color: var(--card);
+  background-color: var(--crema); 
   border: 1px solid var(--linea);
-  border-left: 5px solid var(--teal); 
+  border-left: 6px solid var(--hoja); 
   border-radius: 14px;
-  padding: 1.25rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  padding: 1.5rem; 
+  min-height: 260px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .tarjeta-receta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(17, 70, 34, 0.12);
+  transform: translateY(-8px); 
+  box-shadow: 0 16px 32px rgba(127, 186, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.08); 
 }
-.tarjeta-receta h3 {
-  margin: 0 0 0.5rem 0;
-  color: var(--verde-hondo);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.15rem;
+tarjeta-receta:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(127, 186, 0, 0.15); 
 }
 .tarjeta-detalles {
   display: flex;
@@ -88,4 +99,45 @@ panel-filtros {
 
 .oculto {
   display: none !important;
+}
+.receta-ingredientes-lista {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card);
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  overflow: hidden; 
+  margin-top: 1rem;
+}
+
+.receta-ingredientes-lista caption {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--verde-hondo);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.receta-ingredientes-lista thead {
+  background-color: var(--crema-2);
+}
+
+.receta-ingredientes-lista th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--verde-noche);
+  border-bottom: 2px solid var(--verde);
+}
+
+.receta-ingredientes-lista td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--linea);
+  color: var(--texto);
+}
+
+
+.receta-ingredientes-lista tbody tr:last-child td {
+  border-bottom: none;
 }
