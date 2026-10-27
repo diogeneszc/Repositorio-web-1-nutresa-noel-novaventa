@@ -1,0 +1,152 @@
+/*
+  Componente: pasos de preparación del editor de recetas
+  Prefijo obligatorio: .receta-editor-pasos (metodología BEM)
+  Solo variables corporativas definidas en sazon.css.
+  Si los nombres de tus variables son distintos, cámbialos aquí (son los únicos valores "externos").
+*/
+
+.receta-editor-pasos {
+  margin: var(--espacio-m) 0;
+  padding: var(--espacio-m);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+}
+
+.receta-editor-pasos__titulo {
+  padding: 0 var(--espacio-s);
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+.receta-editor-pasos__ayuda {
+  margin: 0 0 var(--espacio-m);
+  color: var(--color-texto-suave);
+}
+
+.receta-editor-pasos__lista {
+  margin: 0 0 var(--espacio-m);
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-m);
+}
+
+.receta-editor-pasos__item {
+  display: grid;
+  gap: var(--espacio-s);
+  padding: var(--espacio-m);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background: var(--color-fondo);
+}
+
+.receta-editor-pasos__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-s);
+}
+
+.receta-editor-pasos__etiqueta {
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+.receta-editor-pasos__acciones {
+  display: flex;
+  gap: var(--espacio-s);
+}
+
+.receta-editor-pasos__boton {
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  cursor: pointer;
+}
+
+.receta-editor-pasos__boton:hover:not(:disabled) {
+  background: var(--color-primario);
+  border-color: var(--color-primario);
+  color: var(--color-superficie);
+}
+
+.receta-editor-pasos__boton--eliminar:hover:not(:disabled) {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.receta-editor-pasos__boton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.receta-editor-pasos__boton:focus-visible,
+.receta-editor-pasos__texto:focus-visible,
+.receta-editor-pasos__agregar:focus-visible {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+.receta-editor-pasos__texto {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--espacio-s);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font: inherit;
+  resize: vertical;
+}
+
+.receta-editor-pasos__texto--invalido {
+  border-color: var(--color-error);
+}
+
+.receta-editor-pasos__error {
+  margin: 0;
+  color: var(--color-error);
+}
+
+.receta-editor-pasos__error--oculto {
+  display: none;
+}
+
+.receta-editor-pasos__agregar {
+  padding: var(--espacio-s) var(--espacio-m);
+  border: 1px dashed var(--color-primario);
+  border-radius: var(--radio-borde);
+  background: transparent;
+  color: var(--color-primario);
+  font: inherit;
+  cursor: pointer;
+}
+
+.receta-editor-pasos__agregar:hover {
+  background: var(--color-primario);
+  color: var(--color-superficie);
+}
+
+/* Texto solo para lectores de pantalla (región viva) */
+.receta-editor-pasos__anuncio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .receta-editor-pasos__encabezado {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sazón · Editor de recetas</title>
+  <link rel="stylesheet" href="../../assets/css/sazon.css">
+  <link rel="stylesheet" href="editor-receta.css">
+</head>
+<body>
+  <header data-layout="header"></header>
+  <main class="contenedor pagina-modulo">
+    <section class="bloque-modulo">
+      <h1>Editor de recetas</h1>
+      <p>Redacta los pasos de preparación en el orden en que deben realizarse.</p>
+
+      <p id="receta-estado" class="mensaje-estado oculto" role="status"></p>
+
+      <form id="formulario-receta" novalidate aria-label="Editor de recetas">
+        <div class="grupo-filtro">
+          <label for="receta-titulo">Título de la receta:</label>
+          <input type="text" id="receta-titulo" name="titulo" class="input-texto" required>
+          <p id="receta-titulo-error" class="mensaje-estado oculto" role="alert"></p>
+        </div>
+
+        <!-- Componente de pasos de preparación -->
+        <fieldset class="receta-editor-pasos" id="receta-editor-pasos">
+          <legend class="receta-editor-pasos__titulo">Pasos de preparación</legend>
+          <p class="receta-editor-pasos__ayuda" id="receta-editor-pasos-ayuda">
+            Escribe un paso por cuadro. Usa las flechas para cambiar su orden; la numeración se asigna sola.
+          </p>
+
+          <ol class="receta-editor-pasos__lista" data-pasos="lista" aria-describedby="receta-editor-pasos-ayuda"></ol>
+
+          <button type="button" class="receta-editor-pasos__agregar" data-pasos="agregar">+ Agregar paso</button>
+
+          <!-- Región viva: anuncia movimientos y eliminaciones a lectores de pantalla -->
+          <p class="receta-editor-pasos__anuncio" data-pasos="anuncio" role="status" aria-live="polite"></p>
+        </fieldset>
+
+        <button type="submit" class="btn">Guardar receta</button>
+      </form>
+    </section>
+  </main>
+  <footer data-layout="footer"></footer>
+
+  <script src="../../services/api.config.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="servicio.js"></script>
+  <script src="editor-pasos.js"></script>
+  <script src="editor-receta.js"></script>
+</body>
+</html>
